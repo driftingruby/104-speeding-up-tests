@@ -61,11 +61,3 @@ RSpec.feature "User Features", type: :feature do
     end
   end
 end
-    scenario "should be successful" do
-      user = User.create(first_name: 'John', last_name: 'Doe', email: 'john.doe@example.com')
-      visit users_path
-      accept_confirm do
-        expect { click_link 'Destroy' }.to change(User, :count).by(-1)
-      end
-      expect(page).to have_content 'User was successfully destroyed.'
-    end
