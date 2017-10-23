@@ -11,3 +11,12 @@ RSpec.configure do |config|
   config.infer_spec_type_from_file_location!
   config.filter_rails_from_backtrace!
 end
+
+# brew install geckodriver
+# brew services start geckodriver
+# Capybara.default_driver = :selenium
+
+# brew install chromedriver
+# brew services start chromedriver
+# Capybara.default_driver = :selenium_chrome
+Capybara.default_driver = :selenium_chrome_headless
